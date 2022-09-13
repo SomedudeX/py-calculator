@@ -1,9 +1,7 @@
 #This is a basic calculator
 #Last edited Mon, Sep 12
 
-from multiprocessing.sharedctypes import Value
 import os
-from timeit import repeat
 
 #Operators needed for printing the answer
 Operators = [" + ", " - ", " x ", " / ", " ^ "]
