@@ -63,7 +63,6 @@ def init(_num_a = None):
 #####################################################################################
 while True: 
     #Initializing and resetting
-    Err = 0
     clear_console()
     init()
     while True:
