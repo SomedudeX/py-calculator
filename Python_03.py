@@ -1,5 +1,5 @@
 #This is a basic calculator
-#Last edited Mon, Sep 12
+#Last edited Sun, Sep 18
 #By Zichen
 
 import os
@@ -8,9 +8,13 @@ import time
 
 #Operators needed for printing the answer
 Operators = [" + ", " - ", " x ", " / ", " ^ "]
+#Operations needed for calculating
 currentOperation = None
+#Number needed for, well the basics of calculator
 Num_a = None
+#Number needed for the basics of calculator
 Num_b = None
+#Answers that is not currently populated
 Ans = 0
 
 #####################################################################################
@@ -31,30 +35,40 @@ def init(_num_a = None):
             Num_a = float(input("Input number A - "))
         clear_console()
         #Print the input
+        try: 
+            Num_a = int(Num_a)
+        except ValueError: 
+            pass
         print(f"{str(Num_a)}\n")
         #User inputting the operation
-        currentOperation = int(input("Please specify which operations you want to perform - \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n"))
+        currentOperation = input("Please specify which operations you want to perform - \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n")
         clear_console()
         #Checking if the user inputted is valid
         if currentOperation == 1 or currentOperation == 2 or currentOperation == 3 or currentOperation == 4 or currentOperation == 5:
             pass
         else: 
             #If the operation the user inputted is invalid, it asks the user to input a new valid value
-            while currentOperation not in [1, 2, 3, 4, 5]: 
-                currentOperation = int(input("Please input a valid value - \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n"))
+            while currentOperation not in ["1", "2", "3", "4", "5"]: 
+                currentOperation = input("Please input a valid value - \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n")
                 clear_console()
             pass
+        #Making currentOperation an integer
+        currentOperation = int(currentOperation)
         #Printing the inputs
         print(f"{Num_a}{Operators[currentOperation - 1]}\n")
         #Inputting the second number
         Num_b = float(input("Input number B - "))
+        try: 
+            Num_b = int(Num_b)
+        except ValueError: 
+            pass
         clear_console()
         #Printing the inputs
         print(f"{str(Num_a)}{Operators[currentOperation - 1]}{str(Num_b)}\n")
     #If any of the values the user entered is not allowed, the program will restart. 
     except ValueError: 
         clear_console()
-        print("Program restarting - A ValueError occured")
+        print("Program restarting - A ValueError occured [67]")
         currentOperation = 6
         return
 
@@ -63,6 +77,7 @@ def init(_num_a = None):
 #####################################################################################
 while True: 
     #Initializing and resetting
+    Err = 0
     clear_console()
     init()
     while True:
@@ -87,7 +102,7 @@ while True:
                 round(Ans,8)
             except ZeroDivisionError: 
                 #Restart the program if the user tries to divide by zero. 
-                print("Program restarting - Couldn't divide by zero")
+                print("Program restarting - Couldn't divide by zero [101]")
                 time.sleep(2)
                 break
         elif currentOperation == 5: 
@@ -96,15 +111,13 @@ while True:
             round(Ans,8)
         else: 
             #Catching any unexpected errors. If this happens, then it means that there is most likely some problem with checking if the input is valid
-            print("Program restarted - A fatal error occured")
+            print("Program restarted - An unknown fatal error occured [110]")
             time.sleep(2)
             break
         #Printing Answer
         clear_console()
         try: 
-            int(Num_a)
-            int(Num_b)
-            int(Ans)
+            Ans = int(Ans)
         except ValueError: 
             pass
         finally: 
@@ -127,7 +140,7 @@ while True:
             init()
             #If an error occured, restart (break this loop)
             if currentOperation == 6: 
-                print("Program restarted - A fatal error occured at line 120")
+                print("Program restarted - A fatal error occured [120]")
                 time.sleep(2)
                 break
         elif repeatAction == 2: 
@@ -135,7 +148,7 @@ while True:
             init(Ans)
             #If an error occured, restart (break this loop)
             if currentOperation == 6: 
-                print("Program restarted - A fatal error occured at line 126")
+                print("Program restarted - A fatal error occured [126]")
                 time.sleep(2)
                 break
         elif repeatAction == 3: 
@@ -146,6 +159,6 @@ while True:
             exit()
         else: 
             clear_console()
-            print("Program restarted - A fatal error occured: Could not find a valid action")
+            print("Program restarted - A fatal error occured: Could not find a valid action [158]")
             time.sleep(2)
             break
