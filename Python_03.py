@@ -3,8 +3,10 @@
 #By Zichen
 
 import os
+import sys
 import time
-
+import webbrowser
+from inspect import currentframe
 
 #Operators needed for printing the answer
 Operators = [" + ", " - ", " x ", " / ", " ^ "]
@@ -19,8 +21,20 @@ Ans = 0
 
 #####################################################################################
 
+def get_linenumber():
+    cf = currentframe()
+    return cf.f_back.f_lineno
+
 def clear_console():
     os.system('clear')
+
+def easter_egg(_variable): 
+    if _variable.lower() == "that's what she said" or _variable.lower() == "thats what she said": 
+        clear_console()
+        print("\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣶⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⠿⠟⠛⠻⣿⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣆⣀⣀⠀⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠻⣿⣿⣿⠅⠛⠋⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢼⣿⣿⣿⣃⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣟⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣛⣛⣫⡄⠀⢸⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⡆⠸⣿⣿⣿⡷⠂⠨⣿⣿⣿⣿⣶⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣾⣿⣿⣿⣿⡇⢀⣿⡿⠋⠁⢀⡶⠪⣉⢸⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⡏⢸⣿⣷⣿⣿⣷⣦⡙⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣇⢸⣿⣿⣿⣿⣿⣷⣦⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣵⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀")
+        time.sleep(2)
+        webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        input("\nPress enter to continue...")
 
 #Init: Asking the user the operation as well as the number and checking that those are valid etc. 
 def init(_num_a = None): 
@@ -32,52 +46,55 @@ def init(_num_a = None):
     try: 
         #Checking if it's the second time running the look (if number A is the answer)
         if _num_a != Ans: 
-            Num_a = float(input("Input number A - "))
-        clear_console()
-        #Print the input
-        try: 
-            Num_a = int(Num_a)
-        except ValueError: 
-            pass
-        print(f"{str(Num_a)}\n")
+            Num_a = input("0.0 \n\nInput number A: ")
+            clear_console()
+            easter_egg(Num_a)
+            Num_a = float(Num_a)
+            print(f"{str(Num_a)}\n")
+        #If it is the second time running, skip asking for a number
+        else: 
+            clear_console()
+            print(f"{str(Num_a)}\n")
         #User inputting the operation
-        currentOperation = input("Please specify which operations you want to perform - \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n")
-        clear_console()
+        currentOperation = input("Please specify which operations you want to perform: \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n")
+        easter_egg(currentOperation)
         #Checking if the user inputted is valid
+        clear_console()
         if currentOperation == 1 or currentOperation == 2 or currentOperation == 3 or currentOperation == 4 or currentOperation == 5:
             pass
         else: 
             #If the operation the user inputted is invalid, it asks the user to input a new valid value
             while currentOperation not in ["1", "2", "3", "4", "5"]: 
-                currentOperation = input("Please input a valid value - \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n")
+                print(f"{str(Num_a)}\n")
+                currentOperation = input("Please input a valid value: \n[1]Addition \n[2]Subtraction \n[3]Multiplication \n[4]Division \n[5]Exponent \n")
                 clear_console()
-            pass
-        #Making currentOperation an integer
         currentOperation = int(currentOperation)
         #Printing the inputs
         print(f"{Num_a}{Operators[currentOperation - 1]}\n")
         #Inputting the second number
-        Num_b = float(input("Input number B - "))
-        try: 
-            Num_b = int(Num_b)
-        except ValueError: 
-            pass
-        clear_console()
+        Num_b = input("Input number B: ")
+        easter_egg(Num_b)
         #Printing the inputs
-        print(f"{str(Num_a)}{Operators[currentOperation - 1]}{str(Num_b)}\n")
+        clear_console()
+        print(f"{str(Num_a)}{Operators[currentOperation - 1]}{str(Num_b)}")
+        Num_b = float(Num_b)
     #If any of the values the user entered is not allowed, the program will restart. 
     except ValueError: 
         clear_console()
-        print("Program restarting - A ValueError occured [67]")
+        print("ERROR\n")
         currentOperation = 6
         return
 
-
-
 #####################################################################################
+
+#Start of program
+clear_console()
+print("You are currently running Python ", sys.version)
+print("Welcome and thank you for using Calculator.py")
+time.sleep(2)
+
 while True: 
     #Initializing and resetting
-    Err = 0
     clear_console()
     init()
     while True:
@@ -86,15 +103,15 @@ while True:
         if currentOperation == 1: 
             #Addition
             Ans = Num_a + Num_b
-            round(Ans,8)
+            Ans = round(Ans,8)
         elif currentOperation == 2:
             #Subtraction
             Ans = Num_a - Num_b
-            round(Ans, 8)
+            Ans = round(Ans, 8)
         elif currentOperation == 3: 
             #Multiplication
             Ans = Num_a * Num_b
-            round(Ans, 8)
+            Ans = round(Ans, 8)
         elif currentOperation == 4:
             #Division
             try: 
@@ -102,29 +119,41 @@ while True:
                 round(Ans,8)
             except ZeroDivisionError: 
                 #Restart the program if the user tries to divide by zero. 
-                print("Program restarting - Couldn't divide by zero [101]")
-                time.sleep(2)
+                clear_console()
+                print(f"ERROR\nProgram error: Couldn't divide by zero [{get_linenumber()}]")
+                input("Press enter to continue...")
                 break
         elif currentOperation == 5: 
             #Exponents
             Ans = Num_a ** Num_b
-            round(Ans,8)
+            Ans = round(Ans,8)
+        elif currentOperation == 6: 
+            #If there's an error during the input phase, it will catch them here
+            print(f"Program error: A fatal error occured [{get_linenumber()}]")
+            input("Press enter to restart...")
+            break
         else: 
-            #Catching any unexpected errors. If this happens, then it means that there is most likely some problem with checking if the input is valid
-            print("Program restarted - An unknown fatal error occured [110]")
-            time.sleep(2)
+            clear_console()
+            print(f"\nProgram error: An unknown fatal error occured - Debug is necessary [{get_linenumber()}]")
+            input("Press enter to continue...")
             break
         #Printing Answer
         clear_console()
-        try: 
-            Ans = int(Ans)
-        except ValueError: 
-            pass
-        finally: 
-            print(f"{str(Num_a)}{Operators[currentOperation - 1]}{str(Num_b)} = {Ans}")
+        print(f"{str(Num_a)}{Operators[currentOperation - 1]}{str(Num_b)} = {Ans}")
         #Repeating Action
-        repeatAction = int(input("\nInput the next action - \n[1]Clear \n[2]Continue Operation \n[3]Quit Operation \n"))
+        repeatAction = input("\nInput the next action: \n[1]Clear Operation \n[2]Continue Operation \n[3]Quit Operation \n")
         clear_console()
+        easter_egg(repeatAction)
+        #Checking if the input is valid
+        if repeatAction == 1 or repeatAction == 2 or repeatAction == 3:
+            pass
+        else: 
+            #If the operation the user inputted is invalid, it asks the user to input a new valid value
+            while repeatAction not in ["1", "2", "3"]: 
+                print(f"{str(Num_a)}{Operators[currentOperation - 1]}{str(Num_b)} = {Ans}")
+                repeatAction = input("\nPlease input a valid value: \n[1]Clear \n[2]Continue Operation \n[3]Quit Operation \n")
+                clear_console()
+            repeatAction = int(repeatAction)
         print(f"{str(Num_a)}{Operators[currentOperation - 1]}{str(Num_b)} = {Ans}")
         #If the user clears the calculator
         if repeatAction == 1: 
@@ -136,29 +165,28 @@ while True:
             #Clearing console
             clear_console()
             #Reinitializing
-            print("Cleared")
             init()
             #If an error occured, restart (break this loop)
             if currentOperation == 6: 
-                print("Program restarted - A fatal error occured [120]")
-                time.sleep(2)
+                print(f"Program error: A fatal error occured [{get_linenumber()}]")
+                input("Press enter to continue...")
                 break
         elif repeatAction == 2: 
             Num_a = Ans
             init(Ans)
             #If an error occured, restart (break this loop)
             if currentOperation == 6: 
-                print("Program restarted - A fatal error occured [126]")
-                time.sleep(2)
+                print(f"Program error: A fatal error occured [{get_linenumber()}]")
+                input("Press enter to continue...")
                 break
         elif repeatAction == 3: 
             clear_console()
-            print("Program exited - User terminated operation")
-            time.sleep(2)
+            print("Program exited: User terminated operation")
+            time.sleep(2.5)
             clear_console()
             exit()
         else: 
             clear_console()
-            print("Program restarted - A fatal error occured: Could not find a valid action [158]")
-            time.sleep(2)
+            print(f"Program restarted: An unknown fatal error occured - Debug is necessary [{get_linenumber()}]")
+            input("Press enter to continue...")
             break
