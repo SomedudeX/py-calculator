@@ -1,6 +1,6 @@
 # Python Calculator
 
-![5032 png_1200](https://user-images.githubusercontent.com/101906945/200211801-e9158296-1c81-43e1-a919-70b5c2b8f776.png)
+![214-2140046_ios-11-calculator-icon-apple-calculator-icon-ios](https://user-images.githubusercontent.com/101906945/200211899-6042b08d-2dc1-442e-9a3d-1f17f7dcb7e9.jpg)
 
 This is a basic calculator. Mainly made this to remember how python works. Currently only the MacOS version is compiled for universal (Both intel and apple). 
 
