@@ -10,7 +10,7 @@ This is a basic calculator. Mainly made this to remember how python works. Curre
 - Added square root
 - Improved error handling
 - Improved stability
-- Compiled the source code
+- Compiled the source code (for Mac)
 
 # Installation
 
