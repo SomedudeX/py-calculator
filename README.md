@@ -1,4 +1,4 @@
-# Python-Calculator
+# Python Calculator
 
 This is a basic calculator. Mainly made this to remember how python works. Currently only the MacOS version is compiled for universal (Both intel and apple). 
 
