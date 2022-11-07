@@ -1,5 +1,7 @@
 # Python Calculator
 
+![5032 png_1200](https://user-images.githubusercontent.com/101906945/200211801-e9158296-1c81-43e1-a919-70b5c2b8f776.png)
+
 This is a basic calculator. Mainly made this to remember how python works. Currently only the MacOS version is compiled for universal (Both intel and apple). 
 
 # Latest Release Notes
