@@ -1,8 +1,8 @@
 # Python Calculator
 
-![214-2140046_ios-11-calculator-icon-apple-calculator-icon-ios](https://user-images.githubusercontent.com/101906945/200211899-6042b08d-2dc1-442e-9a3d-1f17f7dcb7e9.jpg)
+![Calculator](https://user-images.githubusercontent.com/101906945/220220976-b0f0d082-96bd-47e2-bf50-db35a2595ef4.png)
 
-This is a basic calculator. Mainly made this to remember how python works. Currently only the MacOS version is compiled for universal (Both intel and apple). 
+This is a basic calculator. Mainly made this to remember how python works. Currently only the MacOS version is compiled for universal with PyInstaller (Both intel and apple). Updates periodically when I'm interested in working on it. 
 
 # Latest Release Notes
 
