@@ -10,7 +10,7 @@ import sys;
 import time; 
 import webbrowser; 
 
-from Functions.Addition import *;
+from Addition import *;
 from math import sqrt; 
 
 #Error needed to print error type
