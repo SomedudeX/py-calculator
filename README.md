@@ -1,6 +1,6 @@
 A basic calculator running in the command-line. 
 
-Currently only the MacOS version is compiled for universal with PyInstaller (Both intel and apple). The Linux version is compiled but only for ARM64 systems. 
+Currently only the MacOS version is compiled for universal with PyInstaller (Both intel and apple). The Windows version is not compiled. 
 
 ## Latest Release Notes
 
@@ -10,7 +10,7 @@ Currently only the MacOS version is compiled for universal with PyInstaller (Bot
 - Added setup script
 - Improved error handling
 - Improved stability
-- Compiled the source code for Mac (x86_64 and ARM64) and Linux (ARM64 only)
+- Compiled the source code for Mac (x86_64 and aarch64)
 - Compiled code for Windows coming soon
 
 ## Installation
@@ -20,11 +20,6 @@ Currently only the MacOS version is compiled for universal with PyInstaller (Bot
 - Download and extract the file
 - Double-click on Setup.tool and follow the instructions
 
-#### Linux -
-
-- Download and extract the file
-- Run Setup.sh in the command line and follow the instructions
-
 #### Windows -
 
 - Install Python 3
@@ -33,4 +28,6 @@ Currently only the MacOS version is compiled for universal with PyInstaller (Bot
 - Type the following
 
 
-Future updates are planned but not guaranteed; I will update it periodically when I have time. Releases and further documentation can be found on the right, and source code is found above.
+This project has been deprecated; I will only update it periodically when I have time and interest to do so. (i.e. updating if I feel like it)
+
+Releases and further documentation can be found on the right, and source code is found above.
