@@ -26,8 +26,9 @@ Currently only the MacOS version is compiled for universal with PyInstaller (Bot
 - Download the file
 - Open terminal and navigate into the folder you downloaded in
 - Type the following
+  `python Pycalculator.py`
 
 
-This project has been deprecated; I will only update it periodically when I have time and interest to do so. (i.e. updating if I feel like it)
+**This project has been fully abandoned: No more updates (not even bug fixes) will be provided**
 
 Releases and further documentation can be found on the right, and source code is found above.
