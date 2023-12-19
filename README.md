@@ -1,6 +1,4 @@
-A basic calculator running in the command-line. 
-
-Currently only the MacOS version is compiled for universal with PyInstaller (Both intel and apple). The Windows version is not compiled. 
+A basic calculator running in the command-line. Currently only the MacOS version is compiled for universal with PyInstaller (Both intel and apple). The Windows version is not compiled. Releases and further documentation can be found on the right, and source code is found above.
 
 ## Latest Release Notes
 
@@ -11,7 +9,6 @@ Currently only the MacOS version is compiled for universal with PyInstaller (Bot
 - Improved error handling
 - Improved stability
 - Compiled the source code for Mac (x86_64 and aarch64)
-- Compiled code for Windows coming soon
 
 ## Installation
 
@@ -28,7 +25,5 @@ Currently only the MacOS version is compiled for universal with PyInstaller (Bot
 - Type the following
   `python Pycalculator.py`
 
-
-**This project has been fully abandoned: No more updates (not even bug fixes) will be provided**
-
-Releases and further documentation can be found on the right, and source code is found above.
+Last updated Dec 2023
+Not in active development
