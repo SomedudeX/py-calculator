@@ -25,5 +25,8 @@ A basic calculator running in the command-line. Currently only the MacOS version
 - Type the following
   `python Pycalculator.py`
 
+--
+
 Last updated Dec 2023
+
 Not in active development
