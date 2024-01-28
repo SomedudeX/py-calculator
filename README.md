@@ -8,7 +8,6 @@ A basic calculator running in the command-line. Currently only the MacOS version
 - Added experimental addition function
 - Improved stability
 - Improved error handling
-- Compiled the source code for Mac (x86_64 and aarch64)
 
 ## Installation
 
@@ -26,8 +25,3 @@ A basic calculator running in the command-line. Currently only the MacOS version
   `python Pycalculator.py`
 
 --
-
-```
-Last updated Dec 2023  
-Not in active development
-```
