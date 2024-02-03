@@ -1,4 +1,4 @@
-A basic calculator running in the command-line. Currently only the MacOS version is compiled with PyInstaller. The Windows version is not compiled. Releases can be found on the right, and source code is found above.
+A basic calculator running in the command-line. Releases can be found on the right, and source code is found above.
 
 ## Latest Release Notes
 
